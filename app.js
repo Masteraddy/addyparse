@@ -24,7 +24,7 @@ const api = new ParseServer({
   ...config,
 });
 
-const options = { allowInsecureHTTP: false };
+const options = { allowInsecureHTTP: true };
 
 const dashboard = new ParseDashboard(
   {
