@@ -1,0 +1,19 @@
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'directAccess' default will change to 'true' in a future version. Additionally, the environment variable 'PARSE_SERVER_ENABLE_EXPERIMENTAL_DIRECT_ACCESS' will be deprecated and renamed to 'PARSE_SERVER_DIRECT_ACCESS' in a future version; it is currently possible to use either one.","timestamp":"2022-08-16T15:04:28.486Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'enforcePrivateUsers' default will change to 'true' in a future version.","timestamp":"2022-08-16T15:04:28.490Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'directAccess' default will change to 'true' in a future version. Additionally, the environment variable 'PARSE_SERVER_ENABLE_EXPERIMENTAL_DIRECT_ACCESS' will be deprecated and renamed to 'PARSE_SERVER_DIRECT_ACCESS' in a future version; it is currently possible to use either one.","timestamp":"2022-08-16T15:11:28.202Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'enforcePrivateUsers' default will change to 'true' in a future version.","timestamp":"2022-08-16T15:11:28.205Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'directAccess' default will change to 'true' in a future version. Additionally, the environment variable 'PARSE_SERVER_ENABLE_EXPERIMENTAL_DIRECT_ACCESS' will be deprecated and renamed to 'PARSE_SERVER_DIRECT_ACCESS' in a future version; it is currently possible to use either one.","timestamp":"2022-08-16T15:13:40.683Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'enforcePrivateUsers' default will change to 'true' in a future version.","timestamp":"2022-08-16T15:13:40.687Z"}
+{"level":"info","message":"Parse LiveQuery Server started running","timestamp":"2022-08-16T15:13:40.760Z"}
+{"level":"info","message":"Create new client: bfe55770-48c2-44fb-9c86-0a4be7f032f0","timestamp":"2022-08-16T15:13:51.116Z"}
+{"level":"info","message":"Client disconnect: bfe55770-48c2-44fb-9c86-0a4be7f032f0","timestamp":"2022-08-16T15:13:56.508Z"}
+{"level":"info","message":"Create new client: d6b0563e-a7c8-4e32-8030-c39ed3ab80cb","timestamp":"2022-08-16T15:14:09.552Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'directAccess' default will change to 'true' in a future version. Additionally, the environment variable 'PARSE_SERVER_ENABLE_EXPERIMENTAL_DIRECT_ACCESS' will be deprecated and renamed to 'PARSE_SERVER_DIRECT_ACCESS' in a future version; it is currently possible to use either one.","timestamp":"2022-08-16T15:26:25.731Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'enforcePrivateUsers' default will change to 'true' in a future version.","timestamp":"2022-08-16T15:26:25.735Z"}
+{"level":"info","message":"Parse LiveQuery Server started running","timestamp":"2022-08-16T15:26:25.808Z"}
+{"level":"info","message":"Create new client: 129be440-46ea-450b-b7c9-aff9b1b3a569","timestamp":"2022-08-16T15:26:26.106Z"}
+{"level":"info","message":"Client disconnect: 129be440-46ea-450b-b7c9-aff9b1b3a569","timestamp":"2022-08-16T15:26:35.760Z"}
+{"level":"info","message":"Create new client: 2a104ab9-5353-4d0d-8912-3a774338346f","timestamp":"2022-08-16T15:27:24.061Z"}
+{"level":"info","message":"Create new client: 9ba29b97-6710-4f88-b2d7-d6e344f3af16","timestamp":"2022-08-16T15:30:40.049Z"}
+{"level":"info","message":"Client disconnect: 9ba29b97-6710-4f88-b2d7-d6e344f3af16","timestamp":"2022-08-16T15:33:35.064Z"}
+{"level":"info","message":"Create new client: c431807b-de3a-421c-9360-82b2d77eb377","timestamp":"2022-08-16T15:33:40.679Z"}

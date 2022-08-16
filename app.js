@@ -22,6 +22,9 @@ const config = {
 
 const api = new ParseServer({
   ...config,
+  liveQuery: {
+    classNames: ["link"],
+  },
 });
 
 const options = { allowInsecureHTTP: true };
@@ -55,4 +58,7 @@ app.use(mountPath, api);
 // make the Parse Dashboard available at /dashboard
 app.use("/dashboard", dashboard);
 
-app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
+// app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
+let httpServer = require("http").createServer(app);
+httpServer.listen(PORT, () => console.log(`App is running on port ${PORT}`));
+var parseLiveQueryServer = ParseServer.createLiveQueryServer(httpServer);
