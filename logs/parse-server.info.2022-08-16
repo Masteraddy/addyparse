@@ -17,3 +17,18 @@
 {"level":"info","message":"Create new client: 9ba29b97-6710-4f88-b2d7-d6e344f3af16","timestamp":"2022-08-16T15:30:40.049Z"}
 {"level":"info","message":"Client disconnect: 9ba29b97-6710-4f88-b2d7-d6e344f3af16","timestamp":"2022-08-16T15:33:35.064Z"}
 {"level":"info","message":"Create new client: c431807b-de3a-421c-9360-82b2d77eb377","timestamp":"2022-08-16T15:33:40.679Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'directAccess' default will change to 'true' in a future version. Additionally, the environment variable 'PARSE_SERVER_ENABLE_EXPERIMENTAL_DIRECT_ACCESS' will be deprecated and renamed to 'PARSE_SERVER_DIRECT_ACCESS' in a future version; it is currently possible to use either one.","timestamp":"2022-08-16T15:36:29.353Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'enforcePrivateUsers' default will change to 'true' in a future version.","timestamp":"2022-08-16T15:36:29.357Z"}
+{"level":"info","message":"Parse LiveQuery Server started running","timestamp":"2022-08-16T15:36:29.486Z"}
+{"level":"info","message":"Create new client: cc281723-eb5a-401f-9979-891993e58db8","timestamp":"2022-08-16T15:36:38.146Z"}
+{"level":"info","message":"Create new client: 4e4cc43a-8817-4e13-9d4a-c627977cd752","timestamp":"2022-08-16T15:36:38.154Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'directAccess' default will change to 'true' in a future version. Additionally, the environment variable 'PARSE_SERVER_ENABLE_EXPERIMENTAL_DIRECT_ACCESS' will be deprecated and renamed to 'PARSE_SERVER_DIRECT_ACCESS' in a future version; it is currently possible to use either one.","timestamp":"2022-08-16T15:48:28.564Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'enforcePrivateUsers' default will change to 'true' in a future version.","timestamp":"2022-08-16T15:48:28.569Z"}
+{"level":"info","message":"Parse LiveQuery Server started running","timestamp":"2022-08-16T15:48:28.648Z"}
+{"level":"info","message":"Create new client: 413a4683-13e9-43ad-adca-15402a375eeb","timestamp":"2022-08-16T15:48:29.067Z"}
+{"level":"info","message":"Create new client: cd8e99ef-6a9f-48f1-b0db-8d17648a5fbd","timestamp":"2022-08-16T15:48:31.137Z"}
+{"level":"info","message":"Client disconnect: cd8e99ef-6a9f-48f1-b0db-8d17648a5fbd","timestamp":"2022-08-16T15:58:27.069Z"}
+{"level":"info","message":"Client disconnect: 413a4683-13e9-43ad-adca-15402a375eeb","timestamp":"2022-08-16T15:58:27.082Z"}
+{"level":"info","message":"Create new client: 2bd9f569-dbd2-4cd9-a587-43d968c2f3e8","timestamp":"2022-08-16T17:10:51.067Z"}
+{"level":"info","message":"Create new client: 85c3ef7d-3497-40f7-91b1-a737aaf00fc4","timestamp":"2022-08-16T17:10:53.312Z"}
+{"level":"info","message":"Client disconnect: 85c3ef7d-3497-40f7-91b1-a737aaf00fc4","timestamp":"2022-08-16T17:21:56.348Z"}

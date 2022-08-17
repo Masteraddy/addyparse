@@ -2,11 +2,33 @@ require("dotenv").config();
 const express = require("express");
 const ParseServer = require("parse-server").ParseServer;
 const ParseDashboard = require("parse-dashboard");
+// const CloudinaryAdapter = require("parse-server-cloudinary-adapter");
+const CloudinaryAdapter = require("./utils/CloudinaryAdapter");
 
 const PORT = process.env.PORT || 1337;
 
 const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 const mountPath = process.env.PARSE_MOUNT || "/parse";
+
+const mailAdapterOptions = {
+  //For Gmail
+  service: process.env.MAIL_SERVICE,
+  email: process.env.MAIL_USER,
+  password: process.env.MAIL_PASS,
+  // templates: {
+  //   //This template is used only for reset password email
+  //   resetPassword: {
+  //     //Path to your template
+  //     template: __dirname + "/views/email/reset-password",
+  //     //Subject for this email
+  //     subject: "Reset your password",
+  //   },
+  //   verifyEmail: {
+  //     template: __dirname + "/views/email/verify-email",
+  //     subject: "Verify Email",
+  //   },
+  // },
+};
 
 if (!databaseUri) {
   console.log("DATABASE_URI not specified, falling back to localhost.");
@@ -14,6 +36,8 @@ if (!databaseUri) {
 
 const config = {
   serverURL: process.env.SERVER_URL || `http://localhost:${PORT}${mountPath}`,
+  publicServerURL:
+    process.env.SERVER_URL || `http://localhost:${PORT}${mountPath}`,
   appId: process.env.APP_ID || "myAppId",
   masterKey: process.env.MASTER_KEY || "myMasterKey",
   appName: process.env.APP_NAME || "MyApp",
@@ -23,7 +47,27 @@ const config = {
 const api = new ParseServer({
   ...config,
   liveQuery: {
-    classNames: ["link"],
+    classNames: ["link", "_User", "Chats", "Messages", "Notifications"],
+  },
+  filesAdapter: new CloudinaryAdapter({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+  }),
+  // Enable email verification
+  verifyUserEmails: true,
+
+  // Set email verification token validity to 2 hours
+  emailVerifyTokenValidityDuration: 2 * 60 * 60,
+
+  // Set email adapter
+  emailAdapter: {
+    // module: "simple-parse-smtp-adapter",
+    module: "parse-server-generic-email-adapter",
+    options: {
+      // Additional adapter options
+      ...mailAdapterOptions,
+    },
   },
 });
 
@@ -59,6 +103,6 @@ app.use(mountPath, api);
 app.use("/dashboard", dashboard);
 
 // app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
-let httpServer = require("http").createServer(app);
+const httpServer = require("http").createServer(app);
 httpServer.listen(PORT, () => console.log(`App is running on port ${PORT}`));
-var parseLiveQueryServer = ParseServer.createLiveQueryServer(httpServer);
+const parseLiveQueryServer = ParseServer.createLiveQueryServer(httpServer);
