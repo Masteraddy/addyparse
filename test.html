@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/parse/dist/parse.js"></script>
+  </head>
+  <body>
+    <h1>Test</h1>
+    <input type="file" name="Upload" id="" />
+    <script>
+      Parse.initialize("TestApp", "JavaScriptKey");
+      Parse.serverURL = "http://localhost:3030/api";
+
+      const GameScore = Parse.Object.extend("link");
+      const query = new Parse.Query(GameScore);
+
+      query.find().then((obj) => console.log(obj));
+      const base64 = "V29ya2luZyBhdCBQYXJzZSBpcyBncmVhdCE=";
+      const file = new Parse.File("myfile.txt", { base64: base64 });
+      file.save().then((obj) => console.log(obj));
+      //   console.log(file);
+    </script>
+  </body>
+</html>

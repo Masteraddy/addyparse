@@ -46,6 +46,7 @@ const config = {
 
 const api = new ParseServer({
   ...config,
+  javascriptKey: process.env.JAVASCRIPT_KEY || "JavaScriptKey",
   liveQuery: {
     classNames: ["link", "_User", "Chats", "Messages", "Notifications"],
   },
@@ -54,6 +55,9 @@ const api = new ParseServer({
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET,
   }),
+  fileUpload: {
+    enableForPublic: true,
+  },
   // Enable email verification
   verifyUserEmails: true,
 
@@ -94,6 +98,10 @@ app.get("/", function (req, res) {
     .send(
       "<html><body><h1 style='height:20vh;display:flex;justify-content:center;align-items:center;'>Go to <a href='/dashboard'>Dashboard</a></h1></body></html>"
     );
+});
+
+app.get("/test", (req, res) => {
+  res.sendFile(__dirname + "/test.html");
 });
 
 // make the Parse Server available at /parse
